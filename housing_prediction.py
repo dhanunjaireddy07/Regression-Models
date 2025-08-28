@@ -91,3 +91,16 @@ if __name__=='__main__':
         error_type,error_msg,err_line=sys.exc_info()
         print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
 
+
+'''
+Output:
+
+| Model                 | Training Performance | Testing Performance | Mean Squared Error |
+|------------------------|----------------------|---------------------|---------------------|
+| Linear Regression      | 0.750886             | 0.668750            | 24.291119          |
+| Polynomial Regression  | 0.940932             | 0.805583            | 14.257338          |
+| Lasso Regression       | 0.923544             | 0.785725            | 15.713579          |
+| Ridge Regression       | 0.939936             | 0.819166            | 13.261267          |
+'''
+
+
