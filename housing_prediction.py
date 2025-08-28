@@ -29,9 +29,6 @@ class House_prediction():
         try:
             self.regressor=LinearRegression()
             self.regressor.fit(self.X_train, self.y_train)
-            print("Linear Regression Model Training Performance:  ", self.regressor.score(self.X_train,self.y_train))
-            print("Linear Regression Model Testing Performance:  ",self.regressor.score(self.X_test, self.y_test))
-            print("Linear Regression Model Mean Square Error:  ",mean_squared_error(self.y_test,self.regressor.predict(self.X_test)))
         except Exception as e:
             error_type, error_msg, err_line = sys.exc_info()
             print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
@@ -42,9 +39,6 @@ class House_prediction():
             self.poly_X_test = self.poly.fit_transform(self.X_test)
             self.poly_regressor = LinearRegression()
             self.poly_regressor.fit(self.poly_X_train, self.y_train)
-            print("Polynomial Regression Model Training Performance:  ", self.poly_regressor.score(self.poly_X_train,self.y_train))
-            print("Polynomial Regression Model Testing Performance:  ", self.poly_regressor.score(self.poly_X_test,self.y_test))
-            print("Polynomial Regression Model Mean Square Error:  ", mean_squared_error(self.y_test,self.poly_regressor.predict(self.poly_X_test)))
         except Exception as e:
             error_type, error_msg, err_line = sys.exc_info()
             print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
@@ -53,9 +47,6 @@ class House_prediction():
         try:
             self.lasso=Lasso(alpha=0.01,random_state=42)
             self.lasso.fit(self.poly_X_train, self.y_train)
-            print("Lasso Regression Model Training Performance:  ", self.lasso.score(self.poly_X_train, self.y_train))
-            print("Lasso Regression Model Testing Performance:  ", self.lasso.score(self.poly_X_test,self.y_test))
-            print("Lasso Regression Model Mean Square Error:  ", mean_squared_error(self.y_test,self.lasso.predict(self.poly_X_test)))
         except Exception as e:
             error_type, error_msg, err_line = sys.exc_info()
             print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
@@ -63,9 +54,6 @@ class House_prediction():
         try:
             self.ridge=Ridge(alpha=0.01,random_state=42)
             self.ridge.fit(self.poly_X_train, self.y_train)
-            print("Ridge Regression Model Training Performance:  ", self.ridge.score(self.poly_X_train, self.y_train))
-            print("Ridge Regression Model Testing Performance:  ", self.ridge.score(self.poly_X_test,self.y_test))
-            print("Ridge Regression Model Mean Square Error:  ", mean_squared_error(self.y_test,self.ridge.predict(self.poly_X_test)))
         except Exception as e:
             error_type, error_msg, err_line = sys.exc_info()
             print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
@@ -102,6 +90,7 @@ if __name__=='__main__':
     except Exception as e:
         error_type,error_msg,err_line=sys.exc_info()
         print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
+
 
 
 
