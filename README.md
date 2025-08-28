@@ -8,21 +8,21 @@ This project predicts housing prices using the Boston Housing Dataset with multi
 
 The goal of this project is to compare different regression techniques on the Boston housing dataset. Each model is trained, tested, and evaluated based on:
 
-Training Performance (R² Score)
+-> Training Performance (R² Score)
 
-Testing Performance (R² Score)
+-> Testing Performance (R² Score)
 
-Mean Squared Error (MSE)
+-> Mean Squared Error (MSE)
 
 The models included:
 
-Linear Regression
+-> Linear Regression
 
-Polynomial Regression (degree=2)
+-> Polynomial Regression (degree=2)
 
-Lasso Regression (α=0.01)
+-> Lasso Regression (α=0.01)
 
-Ridge Regression (α=0.01)
+-> Ridge Regression (α=0.01)
 
 📂 Project Structure
 Boston-House-Prediction/
@@ -34,35 +34,37 @@ Boston-House-Prediction/
 
 Install dependencies using:
 
-pip install numpy pandas matplotlib scikit-learn
+-> pip install numpy pandas matplotlib scikit-learn
 
 📊 Example Output
 
 The script will print:
 
-Training and testing scores for each model
+-> Training and testing scores for each model
 
-Mean squared error for each model
+-> Mean squared error for each model
 
-A summary table comparing all models
+-> A summary table comparing all models
 
-Example comparison table:
+--> Example comparison table:
 
-Model	                    Training Performance	  Testing Performance	    Mean Squared Error
-Linear Regression	             0.750886	             0.66875	               24.291119
-Polynomial Regression	         0.940932	             0.805583	               14.257338
-Lasso Regression	             0.923544              0.785725                15.713579
-Ridge Regression	             0.939936              0.819166	               13.261267
+| Model                 | Training Performance | Testing Performance | Mean Squared Error |
+|------------------------|----------------------|---------------------|---------------------|
+| Linear Regression      | 0.750886             | 0.668750            | 24.291119          |
+| Polynomial Regression  | 0.940932             | 0.805583            | 14.257338          |
+| Lasso Regression       | 0.923544             | 0.785725            | 15.713579          |
+| Ridge Regression       | 0.939936             | 0.819166            | 13.261267          |
+
 
 (Values may vary depending on dataset split.)
 
 📈 Key Learnings
 
-Linear models provide a baseline.
+-> Linear models provide a baseline.
 
-Polynomial regression can improve accuracy but risks overfitting.
+-> Polynomial regression can improve accuracy but risks overfitting.
 
-Lasso helps with feature selection by applying L1 regularization.
+-> Lasso reduces overfitting using L1 regularization.
 
-Ridge reduces overfitting using L2 regularization.
+-> Ridge reduces overfitting using L2 regularization.
 
