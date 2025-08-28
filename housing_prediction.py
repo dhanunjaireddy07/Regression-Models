@@ -91,26 +91,3 @@ if __name__=='__main__':
         error_type,error_msg,err_line=sys.exc_info()
         print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
