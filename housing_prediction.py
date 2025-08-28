@@ -1,3 +1,8 @@
+'''
+I Built this project to learn about regression models.
+It includes Linear regression, Polynomial Regression, Lasso Regression and Ridge Regression.
+Here Lasso Regression and Ridge Regression are used for Regularisation purpose.
+'''
 from warnings import filterwarnings
 filterwarnings('ignore')
 import numpy as np
@@ -97,6 +102,7 @@ if __name__=='__main__':
     except Exception as e:
         error_type,error_msg,err_line=sys.exc_info()
         print(f'Error from line -> {err_line.tblineno}  -> type -> {error_type} -> error message {error_msg}')
+
 
 
 
